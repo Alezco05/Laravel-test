@@ -2,8 +2,9 @@
 
 namespace Database\Factories;
 
-use Illuminate\Support\Str;
 use App\Models\Photo;
+use App\Models\Comment;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class PhotoFactory extends Factory
@@ -29,6 +30,7 @@ class PhotoFactory extends Factory
                 'uploadDate' => now(), 
                 'view' => $this->faker->randomDigit(),
                 'imagepath' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/200px-Laravel.svg.png',
+                'comment_idComment' => Comment::factory(),  
         ];
     }
 }
