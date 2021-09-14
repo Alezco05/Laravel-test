@@ -14,12 +14,7 @@ class Location extends Seeder
     public function run()
     {
         Schema::disableForeignKeyConstraints();
-        DB::table('location')->truncate();
-        for($i = 1; $i<=20; $i++){
-            DB::table('location')->insert([
-                'description' => "Description $i",
-            ]);
-        }
+        \App\Models\Location::factory(10)->create();
         Schema::enableForeignKeyConstraints();
     }
 }

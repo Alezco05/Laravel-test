@@ -27,7 +27,6 @@ class AlbumFactory extends Factory
         return [
             'title' => $this->faker->title(),
             'description' => $this->faker->paragraph(),
-            'privacy' => $this->faker->boolean(),
             'member_idMember' => Member::factory(), 
             'location_iLocation' => Location::factory(), 
             'photo_idPhoto' => Photo::factory(),  

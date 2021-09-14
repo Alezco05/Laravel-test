@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Tag extends Model
 {
     use HasFactory;
-
+    public $table = "tag";
     protected $fillable = [
         'photo_idPhoto'
     ];

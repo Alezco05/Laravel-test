@@ -16,12 +16,7 @@ class Role extends Seeder
     public function run()
     {
         Schema::disableForeignKeyConstraints();
-        DB::table('role')->truncate();
-        for($i = 1; $i<=20; $i++){
-            DB::table('role')->insert([
-                'description' => "Description $i",
-            ]);
-        }
+        \App\Models\Role::factory(10)->create();
         Schema::enableForeignKeyConstraints();
     }
 }

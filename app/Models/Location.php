@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Location extends Model
 {
     use HasFactory;
-    
+    public $table = "location";
     protected $fillable = [
         'name', 'shortName'
     ];

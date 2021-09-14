@@ -13,6 +13,6 @@ class Albums extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\Album::factory(10)->create();
     }
 }

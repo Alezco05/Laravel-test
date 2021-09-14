@@ -16,12 +16,7 @@ class Tag_Photos extends Seeder
     public function run()
     {
         Schema::disableForeignKeyConstraints();
-        DB::table('tag_photos')->truncate();
-        for($i = 1; $i<=20; $i++){
-            DB::table('tag_photos')->insert([
-                'photo_idPhoto' => "$i",
-            ]);
-        }
+        \App\Models\Tag_photo::factory(10)->create();
         Schema::enableForeignKeyConstraints();
     }
 }
