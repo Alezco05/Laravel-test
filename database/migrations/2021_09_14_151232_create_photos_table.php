@@ -21,6 +21,8 @@ class CreatePhotosTable extends Migration
             $table->dateTime('uploadDate')->nullable();
             $table->integer('view')->nullable();
             $table->string('imagepath',100)->nullable();
+            $table->foreignId('comment_idComment')->constrained()
+            ->onDelete('cascade');
             $table->timestamps();
         });
     }
