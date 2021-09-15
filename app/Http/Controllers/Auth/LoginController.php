@@ -40,8 +40,8 @@ class LoginController extends Controller
 
     protected function redirectTo()
     {
-        if (auth()->user()->role == 'admin') {
-            return '/admin';
+        if (auth()->user()->role_idRole == 0) {
+            return '/dashboard/post';
         }
         return '/dashboard/post';
     }
