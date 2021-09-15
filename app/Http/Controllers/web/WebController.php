@@ -8,7 +8,6 @@ class WebController extends Controller
 {
     public function index()
     {
-
         return view('dashboard.master');
  
     }

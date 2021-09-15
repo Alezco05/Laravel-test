@@ -17,4 +17,8 @@ class Member extends Model
         'address', 
         'role_idRole'
     ];
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class)->withTimestamps();
+    }
 }
